@@ -40,7 +40,7 @@ export default function Home() {
 	}, []);
 
 	return (
-		<div className='px-8 min-h-screen bg-mainBackground flex flex-col justify-center items-center overflow-hidden'>
+		<div className='px-8 min-h-screen bg-[#FBFBFE] flex flex-col justify-center items-center overflow-hidden'>
 			<main
 				className={`w-full max-w-6xl flex flex-col-reverse sm:flex-row sm:justify-between gap-8 ${
 					isHovered && isMobile ? 'hidden' : 'flex'

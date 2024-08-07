@@ -6,20 +6,20 @@ const AnimatedBackground = () => {
 	useEffect(() => {
 		const createDot = () => {
 			const dot = document.createElement('div');
-			const size = Math.random() * 300 + 900; // Increased size range
-			const colors = ['#EBFAF0', '#F6EBFA', '#F3F1D3', '#E9F0F9'];
+			const size = Math.random() * 100 + 900; // Increased size range
+			const colors = ['#ECEBFA', '#EBFAF8', '#EBF7FA', '#EEEEF7'];
 			const color = colors[Math.floor(Math.random() * colors.length)];
 
 			dot.style.width = `${size}px`;
 			dot.style.height = `${size}px`;
 			dot.style.backgroundColor = color;
-			dot.style.borderRadius = '50%';
+			dot.style.borderRadius = '200%';
 			dot.style.position = 'absolute';
 			dot.style.top = `${Math.random() * 100}%`;
 			dot.style.left = `${Math.random() * 100}%`;
-			dot.style.filter = 'blur(30px)';
+			dot.style.filter = 'blur(80px)';
 			dot.style.animation = `move ${
-				Math.random() * 20 + 20
+				Math.random() * 10 + 10
 			}s linear infinite`;
 
 			const backgroundContainer =
@@ -30,7 +30,6 @@ const AnimatedBackground = () => {
 		};
 
 		for (let i = 0; i < 20; i++) {
-			// Increased the number of dots
 			createDot();
 		}
 	}, []);
