@@ -1,33 +1,62 @@
+/* styles/globals.css */
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 :root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+	--foreground-rgb: 0, 0, 0;
+	--background-start-rgb: 214, 219, 220;
+	--background-end-rgb: 255, 255, 255;
 }
 
 @media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
+	:root {
+		background: #e9f2f6;
+	}
 }
 
 body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+	color: rgb(var(--foreground-rgb));
+	background: #e9f2f6;
 }
 
 @layer utilities {
-  .text-balance {
-    text-wrap: balance;
-  }
+	.text-balance {
+		text-wrap: balance;
+	}
+}
+
+.animated-gradient {
+	position: fixed;
+	width: 100%;
+	height: 100%;
+	top: 0;
+	left: 0;
+	overflow: hidden;
+	z-index: -1;
+	background: linear-gradient(
+		to bottom,
+		rgb(var(--background-start-rgb)),
+		rgb(var(--background-end-rgb))
+	); /* Ensure background gradient is applied */
+}
+
+.animated-gradient div {
+	animation: move 40s linear infinite; /* Adjusted duration for slower animation */
+}
+
+@keyframes move {
+	0% {
+		transform: translate(0, 0);
+		opacity: 1;
+	}
+	50% {
+		transform: translate(-50vw, -50vh); /* Adjusted to prevent overflow */
+		opacity: 0.7;
+	}
+	100% {
+		transform: translate(0, 0);
+		opacity: 1;
+	}
 }
