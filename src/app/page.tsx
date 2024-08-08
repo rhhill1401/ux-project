@@ -1,10 +1,10 @@
 'use client';
 
-import {useState, useCallback, useEffect} from 'react';
+import {useState, useEffect} from 'react';
 import SVGOverlay from '@/components/SVGOverlay';
 import Header from '@/components/header';
 import ProjectList from '@/components/projectsList';
-// import AnimatedBackground from '@/components/animatedBackground';
+import ParticlesBackground from '@/components/particlesBG';
 
 export default function Home() {
 	const [isHovered, setIsHovered] = useState(false);
@@ -13,19 +13,19 @@ export default function Home() {
 	const [videoUrl, setVideoUrl] = useState<string | null>(null);
 
 	const handleOverlayClose = () => {
-		setIsHovered(false); // Reset hover state when overlay closes
-		setHoveredIndex(null); // Reset hovered index when overlay closes
-		setVideoUrl(null); // Reset video URL when overlay closes
-		console.log('Overlay closed'); // Debug log
+		setIsHovered(false);
+		setHoveredIndex(null);
+		setVideoUrl(null);
+		console.log('Overlay closed');
 	};
 
 	const handleLinkClick = (url?: string) => {
 		setIsHovered(true);
 		if (url) {
 			setVideoUrl(url); // Set the video URL
-			console.log(`Video URL set in handleLinkClick: ${url}`); // Debug log
+			console.log(`Video URL set in handleLinkClick: ${url}`);
 		} else {
-			console.log('No video URL provided in handleLinkClick'); // Debug log for no URL
+			console.log('No video URL provided in handleLinkClick');
 		}
 	};
 
@@ -58,14 +58,13 @@ export default function Home() {
 			<div>
 				<SVGOverlay
 					isVisible={isHovered}
-					onClose={handleOverlayClose} // Pass the handler for closing the overlay
+					onClose={handleOverlayClose}
 					isMobile={isMobile}
-					videoUrl={videoUrl as string | undefined} // Pass the video URL
+					videoUrl={videoUrl as string | undefined}
 				/>
 			</div>
-			{/* <div className='absolute inset-0 z-0'>
-				<AnimatedBackground />
-			</div> */}
+
+			<ParticlesBackground />
 		</div>
 	);
 }
