@@ -4,7 +4,7 @@ import {useState, useCallback, useEffect} from 'react';
 import SVGOverlay from '@/components/SVGOverlay';
 import Header from '@/components/header';
 import ProjectList from '@/components/projectsList';
-import AnimatedBackground from '@/components/animatedBackground';
+// import AnimatedBackground from '@/components/animatedBackground';
 
 export default function Home() {
 	const [isHovered, setIsHovered] = useState(false);
@@ -63,9 +63,9 @@ export default function Home() {
 					videoUrl={videoUrl as string | undefined} // Pass the video URL
 				/>
 			</div>
-			<div className='absolute inset-0 z-0'>
+			{/* <div className='absolute inset-0 z-0'>
 				<AnimatedBackground />
-			</div>
+			</div> */}
 		</div>
 	);
 }
