@@ -25,10 +25,10 @@ const ParticlesBackground = () => {
 							],
 						},
 						move: {
-							speed: 1,
+							speed: 5,
 						},
 						size: {
-							value: {min: 200, max: 400},
+							value: {min: 400, max: 600},
 						},
 					},
 
@@ -54,7 +54,7 @@ const ParticlesBackground = () => {
 				ref={particlesContainerRef}
 				id='tsparticles'
 				className='absolute inset-0'
-				style={{filter: 'blur(30px)'}}></div>
+				style={{filter: 'blur(20px)'}}></div>
 		</div>
 	);
 };

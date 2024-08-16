@@ -7,18 +7,21 @@ export interface Portfolio {
 
 export const portfolios: Portfolio[] = [
 	{
-		title: 'Character Screen',
+		title: 'Milli Linked Accounts',
 		year: 2024,
-		link: '/character-screen',
+		link: '/chat-screen',
 		videoUrl:
-			'https://res.cloudinary.com/djfcozdnf/video/upload/v1723051517/0807_rmzrfs.mov',
+			'https://res.cloudinary.com/djfcozdnf/video/upload/v1723754428/0815_3_uvglxk.mov',
 	},
-	{title: 'Animated Card', year: 2024, link: '/animated-card'},
-	{title: 'Dashboard Screen', year: 2024, link: '/dashboard-screen'},
-	{title: 'Chat Screen', year: 2024, link: '/chat-screen'},
-	{title: 'Goal Screen', year: 2024, link: '/goal-screen'},
 	{
-		title: 'Milli Create Account',
+		title: 'Milli Restricted Access',
+		year: 2024,
+		link: '/goal-screen',
+		videoUrl:
+			'https://res.cloudinary.com/djfcozdnf/video/upload/v1723751481/restrictedAccessFlag_vf1yxh.mov',
+	},
+	{
+		title: 'Milli Create Jar',
 		year: 2024,
 		link: '/milli-dashboard',
 		videoUrl:
@@ -32,14 +35,38 @@ export const portfolios: Portfolio[] = [
 			'https://res.cloudinary.com/djfcozdnf/video/upload/v1723067362/milliaccruedinterest_xxxumb.mov',
 	},
 	{
+		title: 'Character Screen',
+		year: 2024,
+		link: '/character-screen',
+		videoUrl:
+			'https://res.cloudinary.com/djfcozdnf/video/upload/v1723817859/dashboard_irfnto.mov',
+	},
+	{
+		title: 'Chat Screen',
+		year: 2024,
+		link: '/chat-screen',
+		videoUrl:
+			'https://res.cloudinary.com/djfcozdnf/video/upload/v1723761650/ChatScreeen_ml0pom.mp4',
+	},
+	{
+		title: 'Legends AI Demo',
+		year: 2024,
+		link: '/animated-card',
+		videoUrl:
+			'https://res.cloudinary.com/djfcozdnf/video/upload/v1723830213/legendsDemo_x9ndxh.mp4',
+	},
+	{
 		title: 'LovelySkin Dashboard',
 		year: 2024,
 		link: '/lovelyskin-dashboard',
 		videoUrl:
 			'https://res.cloudinary.com/djfcozdnf/video/upload/v1723066919/lovelskinMobile_lzwqxk.mov',
 	},
-	{title: 'LovelySkin Mobile', year: 2024, link: '/lovelyskin-mobile'},
-	{title: 'Character Screen', year: 2024, link: '/character-screen-3'},
-	{title: 'Character Screen', year: 2024, link: '/character-screen-4'},
-	{title: 'Character Screen', year: 2024, link: '/character-screen-5'},
+	{
+		title: 'EYL Pitch Competition ',
+		year: 2024,
+		link: '/character-screen-4',
+		videoUrl:
+			'https://res.cloudinary.com/djfcozdnf/video/upload/v1723757933/EYL_Submission_wntiik.mp4',
+	},
 ];

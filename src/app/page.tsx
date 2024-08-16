@@ -40,22 +40,26 @@ export default function Home() {
 	}, []);
 
 	return (
-		<div className='px-8 min-h-screen bg-[#FBFBFE] flex flex-col justify-center items-center overflow-hidden'>
-			<main
-				className={`w-full max-w-6xl flex flex-col-reverse sm:flex-row sm:justify-between gap-8 ${
-					isHovered && isMobile ? 'hidden' : 'flex'
-				}`}>
-				<div className='w-full min-w-[300px] sm:w-4/5  sm:pr-40 lg:pr-60 z-10'>
-					<ProjectList
-						handleLinkClick={handleLinkClick} // Pass the link click handler
-						hoveredIndex={hoveredIndex} // Pass the hovered index
-					/>
-				</div>
-				<div className='w-full mt-20 mb-20 sm:order-last sm:relative sm:top-[200px] z-10'>
-					{!isHovered && <Header />}
-				</div>
-			</main>
-			<div>
+		<div className='relative min-h-screen overflow-hidden'>
+			<div className='fixed inset-0 z-0'>
+				<ParticlesBackground />
+			</div>
+
+			<div className='px-8 min-h-screen flex flex-col justify-end items-center relative z-10'>
+				<main
+					className={`w-full max-w-6xl flex flex-col-reverse sm:flex-row sm:justify-between gap-8 mt-60 ${
+						isHovered && isMobile ? 'hidden' : 'flex'
+					}`}>
+					<div className='w-full min-w-[300px] sm:w-4/5 sm:pr-40 lg:pr-60'>
+						<ProjectList
+							handleLinkClick={handleLinkClick}
+							hoveredIndex={hoveredIndex}
+						/>
+					</div>
+					<div className='w-full mt-20 mb-20 sm:order-last sm:relative sm:top-[200px]'>
+						{!isHovered && <Header />}
+					</div>
+				</main>
 				<SVGOverlay
 					isVisible={isHovered}
 					onClose={handleOverlayClose}
@@ -63,8 +67,6 @@ export default function Home() {
 					videoUrl={videoUrl as string | undefined}
 				/>
 			</div>
-
-			<ParticlesBackground />
 		</div>
 	);
 }

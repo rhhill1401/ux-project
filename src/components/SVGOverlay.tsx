@@ -23,17 +23,19 @@ const SVGOverlay = ({
 
 	return (
 		<div
-			className={`fixed inset-0 z-50 flex justify-center items-center ${
-				isMobile ? 'bg-opacity-75' : 'bg-opacity-50'
+			className={`fixed inset-0 z-50 flex justify-center items-start  ${
+				isMobile ? 'bg-opacity-75' : 'bg-opacity-50 mt-[-200px]'
 			}`}
 			onClick={handleBackgroundClick}>
-			<div className='  flex justify-center  sm:flex-none sm:block  p-8 mt-8 top-4 sm:absolute sm:top-52 sm:right-4 sm:mr-2 lg:mr-[200px] 2xl:mr-[400px] w-full h-full sm:max-w-md sm:max-h-md lg:max-w-lg lg:max-h-lg'>
+			<div className='flex justify-center  sm:flex-none sm:block  p-8 mt-8 top-4 sm:absolute sm:top-52 sm:right-4 sm:mr-[0px] md:mr-[100px] lg:mr-[200px] xl:mr-[500px] min-[1900px]:mr-[800px] w-full h-full sm:max-w-md sm:max-h-md lg:max-w-lg lg:max-h-lg'>
 				{videoUrl ? (
 					<video
 						src={videoUrl}
 						controls
 						autoPlay
-						className=' w-6/6  h-6/6  sm:w-5/6 sm:h-6/6   object-cover rounded-3xl'
+						className={`w-6/6  sm:w-5/6 sm:h-6/6   object-cover rounded-3xl ${
+							isMobile ? 'h-5/6' : 'h-6/6'
+						} `}
 						style={{
 							borderRadius: '1.5rem',
 							backgroundColor: 'black',

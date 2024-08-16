@@ -23,7 +23,7 @@ const ProjectList = React.forwardRef<HTMLDivElement, ProjectListProps>(
 						onClick={() => {
 							console.log(
 								`Item clicked: ${item.title}, Video URL: ${item.videoUrl}`
-							); // Debug log
+							);
 							handleLinkClick(item.videoUrl);
 						}}>
 						<h3 className='font-medium text-black font-sans'>

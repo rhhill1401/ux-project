@@ -27,6 +27,17 @@ body {
 	}
 }
 
+.svg-overlay {
+	transform: translate3d(0, 0, 0) scale3d(1, 1, 1);
+	opacity: 1;
+	transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.svg-overlay:hover {
+	transform: translate3d(0.1vw, -0.1vh, 0) scale3d(1.05, 1.05, 1);
+	opacity: 0.8;
+}
+
 .animated-gradient {
 	position: fixed;
 	width: 100%;
@@ -39,11 +50,11 @@ body {
 		to bottom,
 		rgb(var(--background-start-rgb)),
 		rgb(var(--background-end-rgb))
-	); /* Ensure background gradient is applied */
+	);
 }
 
 .animated-gradient div {
-	animation: move 40s linear infinite; /* Adjusted duration for slower animation */
+	animation: move 40s linear infinite;
 }
 
 @keyframes move {
@@ -52,7 +63,7 @@ body {
 		opacity: 1;
 	}
 	50% {
-		transform: translate(-50vw, -50vh); /* Adjusted to prevent overflow */
+		transform: translate(-50vw, -50vh);
 		opacity: 0.7;
 	}
 	100% {
