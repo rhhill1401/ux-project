@@ -15,13 +15,17 @@ export default function Header() {
 				</span>
 			</h2>
 			<nav className='flex gap-4 font-inter text-lg'>
-				<Link href='/about' className='text-links hover:text-black'>
-					About
+				<Link
+					href='/Resume%20Final.pdf'
+					className='text-links hover:text-black'
+					target='_blank'>
+					Resume
 				</Link>
-				<Link href='/email' className='text-links hover:text-black'>
-					Email
-				</Link>
-				<Link href='/linkedin' className='text-links hover:text-black'>
+				<Link
+					href='https://www.linkedin.com/in/rudolph-hill/'
+					className='text-links hover:text-black'
+					target='_blank'
+					rel='noopener noreferrer'>
 					LinkedIn
 				</Link>
 			</nav>
