@@ -45,18 +45,18 @@ export default function Home() {
 				<ParticlesBackground />
 			</div>
 
-			<div className='px-8 min-h-screen flex flex-col justify-end items-center relative z-10'>
+			<div className='px-8 min-h-screen   flex flex-col   items-center relative z-10'>
 				<main
-					className={`w-full max-w-6xl flex flex-col-reverse sm:flex-row sm:justify-between gap-8 mt-60 ${
+					className={`w-full max-w-6xl flex flex-col-reverse sm:flex-row sm:justify-between gap-8 mt-44 ${
 						isHovered && isMobile ? 'hidden' : 'flex'
 					}`}>
-					<div className='w-full min-w-[300px] sm:w-4/5 sm:pr-40 lg:pr-60'>
+					<div className='w-full  min-w-[300px] sm:w-4/5 sm:pr-40 lg:pr-60 '>
 						<ProjectList
 							handleLinkClick={handleLinkClick}
 							hoveredIndex={hoveredIndex}
 						/>
 					</div>
-					<div className='w-full mt-20 mb-20 sm:order-last sm:relative sm:top-[200px]'>
+					<div className='w-full mt-20 mb-20 sm:order-last sm:relative sm:top-[100px]'>
 						{!isHovered && <Header />}
 					</div>
 				</main>
