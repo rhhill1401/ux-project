@@ -3,7 +3,7 @@ import {openai} from '@ai-sdk/openai';
 import {streamText} from 'ai';
 import {NextResponse} from 'next/server';
 
-export const runtime = 'edge';
+// export const runtime = 'edge';
 
 export async function POST(req: Request) {
 	try {
@@ -99,16 +99,21 @@ ${
 			throw new Error('API key not found');
 		}
 
+		// Log the start of the streaming process
+		console.log('Starting OpenAI stream...');
 		const {textStream} = await streamText({
-			model: openai.chat('gpt-4'), // Use a valid and capable model
+			model: openai.chat('gpt-4'),
 			messages: [systemMessage, ...messages],
 		});
+		console.log('OpenAI stream initiated.');
 
+		// Return the response with CORS headers
 		return new Response(textStream, {
 			headers: {
 				'Content-Type': 'text/event-stream',
 				'Cache-Control': 'no-cache',
 				Connection: 'keep-alive',
+				'Access-Control-Allow-Origin': '*', // CORS headers
 			},
 		});
 	} catch (error) {
