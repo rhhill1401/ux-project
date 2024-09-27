@@ -92,6 +92,13 @@ ${
 `,
 		};
 
+		const apiKey = process.env.OPENAI_API_KEY;
+
+		if (!apiKey) {
+			console.error('API Key is missing');
+			throw new Error('API key not found');
+		}
+
 		const {textStream} = await streamText({
 			model: openai.chat('gpt-4'), // Use a valid and capable model
 			messages: [systemMessage, ...messages],
