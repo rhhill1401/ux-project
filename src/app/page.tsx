@@ -12,7 +12,7 @@ export default function Home() {
 	return (
 		<>
 			<Navigation />
-			<div className='scroll-smooth'>
+			<div className='scroll-smooth w-full overflow-x-hidden'>
 				<section
 					id='home'
 					className='h-auto bg-primaryBlue flex flex-col items-center justify-start sm:bg-primaryGray sm:p-8 sm:flex-row sm:justify-center mb-0'>
