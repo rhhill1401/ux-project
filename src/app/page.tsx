@@ -18,7 +18,7 @@ export default function Home() {
 					className='h-auto bg-primaryBlue flex flex-col items-center justify-start sm:bg-primaryGray sm:p-8 sm:flex-row sm:justify-center mb-0'>
 					<div className='flex flex-col sm:items-center  justify-end min-h-screen sm:justify-center w-full sm:flex-row'>
 						{/* Video container */}
-						<div className='w-full mt-28 sm:mt-0 order-first sm:order-last sm:mb-0 sm:max-w-[650px]'>
+						<div className='flex  justify-center   w-full mt-28 sm:mt-0 order-first sm:order-last sm:mb-0 sm:max-w-[650px]'>
 							<VideoComponent />
 						</div>
 						{/* Card container */}

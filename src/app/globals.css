@@ -10,6 +10,48 @@
 		--logo-size-height: 18px;
 	}
 }
+@keyframes draw-stroke {
+	0% {
+		stroke-dasharray: 1000, 1000;
+		stroke-dashoffset: 0;
+		transform: rotate(0deg);
+	}
+	100% {
+		stroke-dasharray: 1000, 1000;
+		stroke-dashoffset: 0;
+		transform: rotate(360deg);
+	}
+}
+
+/* Define the animation for the stroke drawing */
+.animate-draw-stroke {
+	stroke-dasharray: 300; /* Total length of the stroke */
+	stroke-dashoffset: 300; /* Initially hide the stroke */
+	animation: draw-stroke 3s linear infinite;
+	/* Duration can be adjusted */
+	transform-origin: center; /* Ensure rotation happens around the center */
+}
+/* Sparkle effect: Adding a brief white segment at the end of the stroke */
+@keyframes gradient-rotation {
+	0% {
+		transform: rotate(0deg);
+	}
+	100% {
+		transform: rotate(360deg);
+	}
+}
+
+.animate-gradient-rotation {
+	animation: gradient-rotation 6s linear infinite;
+	filter: drop-shadow(0 0 2px rgba(255, 255, 255, 0.7));
+}
+
+/* Media query for reduced motion */
+@media (prefers-reduced-motion: reduce) {
+	.animate-draw-stroke {
+		animation: none;
+	}
+}
 
 @font-face {
 	font-family: 'Helvetica';

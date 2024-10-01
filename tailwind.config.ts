@@ -13,6 +13,9 @@ const config: Config = {
 				'gradient-conic':
 					'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
 			},
+			animation: {
+				'gradient-rotation': 'gradient-rotation 6s linear infinite',
+			},
 			screens: {
 				mobile: '320px',
 				tablet: '640px',
